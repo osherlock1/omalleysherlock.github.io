@@ -1,0 +1,55 @@
+title: "O'Malley Sherlock"
+description: "EECS portfolio and research notes of an aspiring chip designer"
+url: "https://yourusername.github.io"
+baseurl: ""  # Leave blank for GitHub Pages
+
+# Use Minimal Mistakes as remote theme
+remote_theme: "mmistakes/minimal-mistakes"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
+
+# Author Info
+author:
+  name: "O'Malley Sherlock"
+  avatar: 
+  bio: "Undergrad researcher focused on compute-in-memory and digital system design"
+  location: "USA"
+
+# Enable site-wide features
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+
+
+# Show author profile on all pages
+author_profile: true
+
+# Notes collection
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+
+# 1) Make Jekyll stop ignoring your _pages directory
+include:
+  - _pages
+
+# 2) Re‑declare your notes folder as a collection
+collections:
+  notes:
+    output: true
+    permalink: /notes/:path/
+
+# 3) (Optional) Default front matter for your notes
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: single
+      author_profile: true
